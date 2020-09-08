@@ -1,9 +1,16 @@
+
+
+//Add dependencies
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const cors = require("cors");
+
+//include dbconfig files
 require("dotenv").config();
 require('./src/config/db.config');
+
+
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
