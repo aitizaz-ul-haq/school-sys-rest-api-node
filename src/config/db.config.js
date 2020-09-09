@@ -6,14 +6,14 @@ const mongoose = require("mongoose");
 const uri = process.env.DB_URL;
 
 /* 
-create mongoose dependencies */
+create mongoose options */
 const options = {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }
  
 /* 
-crete connection with mongo db using mongoose 
+create connection with mongo db using mongoose 
  */
 mongoose
   .connect(uri, options)

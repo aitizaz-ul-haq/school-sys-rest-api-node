@@ -1,5 +1,10 @@
+
+/*include mongoose to establish connection with dB  */
 const mongoose = require('mongoose');
 
+
+/* Create user Schema 
+ */
 const userSchema = mongoose.Schema({
     name: {
         type: String,
@@ -21,8 +26,12 @@ const userSchema = mongoose.Schema({
     timestamps: true
 });
 
+/* create modal and provide schema to the modal 
+ */
 const User = mongoose.model('user', userSchema);
 
+/* 
+export model  */
 module.exports = {
     User
 }
