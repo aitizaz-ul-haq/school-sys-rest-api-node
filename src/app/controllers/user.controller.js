@@ -1,5 +1,7 @@
 const { User } = require("../models/user.model");
 
+
+//Add user to DB
 const addUser = async (req, res) => {
   try {
     const { name, email, password } = req.body;
@@ -22,6 +24,8 @@ const addUser = async (req, res) => {
   }
 };
 
+
+// Get all users Stored in DB
 const getUsers = async (req, res) => {
   try {
     const response = await User.find();
@@ -39,6 +43,8 @@ const getUsers = async (req, res) => {
   }
 };
 
+
+//Get a User from DB by ID 
 const getUserById = async (req, res) => {
   try {
     const id = req.params.id;
@@ -59,6 +65,9 @@ const getUserById = async (req, res) => {
   }
 };
 
+
+
+// Update a user in DB by Finding it by id and then updating it 
 const updateUser = async (req, res) => {
   try {
     const id = req.params.id;
@@ -81,6 +90,11 @@ const updateUser = async (req, res) => {
   }
 };
 
+
+
+/* 
+  Remove a user from DB
+*/
 const deleteUser = async (req, res) => {
   try {
     const id = req.params.id;

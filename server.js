@@ -1,5 +1,3 @@
-
-
 //Add dependencies to the project
 const express = require("express");
 const app = express();
@@ -13,14 +11,12 @@ require('./src/config/db.config');
 // import routes
 require('./src/app/routes/user.route')(app);
 
-
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 // add cors to server.js
 app.use(cors());
-
 
 const port = process.env.PORT || 5000;
 
