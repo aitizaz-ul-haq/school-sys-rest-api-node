@@ -25,6 +25,7 @@ const addUser = async (req, res) => {
 };
 
 
+
 // Get all users Stored in DB
 const getUsers = async (req, res) => {
   try {
@@ -42,6 +43,8 @@ const getUsers = async (req, res) => {
     });
   }
 };
+
+
 
 
 //Get a User from DB by ID 
