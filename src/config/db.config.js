@@ -1,12 +1,20 @@
+/*include mongoose  and configure it
+*/
 const mongoose = require("mongoose");
 
+/* provide db url in enviroment */
 const uri = process.env.DB_URL;
 
+/* 
+create mongoose dependencies */
 const options = {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }
-
+ 
+/* 
+crete connection with mongo db using mongoose 
+ */
 mongoose
   .connect(uri, options)
   .then(() => {
